@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module Object</title>
+</head>
+<body>
+<script type="module">
+    import * as Derek from "./scripts/module-object.js";
+
+    console.info(Derek.firstName);
+    console.info(Derek.middleName);
+    console.info(Derek.lastName);
+
+    Derek.hello();
+
+    const person = new Derek.Person();
+</script>
+</body>
+</html>

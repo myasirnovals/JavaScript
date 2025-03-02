@@ -1,0 +1,14 @@
+{
+	"firstName":"Muhamad",
+	"middleName":"Yasir",
+	"lastName":"Noval",
+	"address":{
+		"country":"Indonesian",
+		"city":"Bandung"
+	},
+	"hobbies":[
+		"Coding",
+		"Game",
+		"Nonton Anime"
+	]
+}
