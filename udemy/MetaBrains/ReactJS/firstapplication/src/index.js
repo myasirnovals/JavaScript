@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Header from './Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const firstVariable = 'Expert';
-const secondVariable = 'Developer'
-
 root.render(
-    <h1>{`We are ${firstVariable} ${secondVariable}`}</h1>
+    <Header />
 );
 
 // If you want to start measuring performance in your app, pass a function
