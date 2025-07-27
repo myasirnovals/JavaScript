@@ -2,8 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const firstVariable = 'Expert';
+const secondVariable = 'Developer'
+
 root.render(
-  <h1>Hello World</h1>
+    <h1>{`We are ${firstVariable} ${secondVariable}`}</h1>
 );
 
 // If you want to start measuring performance in your app, pass a function
