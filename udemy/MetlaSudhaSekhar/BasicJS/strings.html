@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Hello World</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+<h1>JavaScript Strings!</h1>
+<p id="demo"></p>
+<p class="length"></p>
+
+<script>
+    let firstName = "Derek";
+    let lastName = "Westbrook";
+    let fullName = firstName + " " + lastName;
+
+    // JavaScript Elements here
+    document.getElementById("demo").innerHTML = firstName + " " + lastName;
+
+    // Length method
+    document.querySelector(".length").innerHTML = fullName.length;
+</script>
+</body>
+</html>
