@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Program</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<h1>JavaScript Data Visualization Charts</h1>
+
+<div id="lineChart" style="width: 100%; max-width: 600px; height: 500px;"></div>
+<div id="scatterChar" style="width: 100%; max-width: 600px; height: 500px;"></div>
+<div id="barChart" style="width: 100%; max-width: 600px; height: 500px;"></div>
+<div id="pieChart" style="width: 100%; max-width: 600px; height: 500px;"></div>
+
+<script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        let data = google.visualization.arrayToDataTable([
+            ['price', 'size'], [50, 7], [60, 6], [70, 8], [90, 9], [100, 9], [110, 10], [120, 10], [130, 11], [140, 12], [150, 13]
+        ]);
+
+        let options = {
+            title: 'Ground Price vs Size',
+            hAxis: {title: 'Square Meters'},
+            vAxis: {title: 'Price in Dollars'},
+            legend: 'none'
+        };
+
+        let barChartData = google.visualization.arrayToDataTable([
+            ['Country', 'PinCode'], ['USA', 45], ['UK', 455], ['NZ', 85],['CA', 95],['Rus', 65],['Aus', 15],['JPN', 71],
+        ]);
+
+        let barChartOptions = {
+            title: 'Country vs PinCode',
+            hAxis: {title: 'Square Meters'},
+            vAxis: {title: 'PinCode in Countries'},
+            is3D: true,
+            legend: 'none'
+        };
+
+        let lineChart = new google.visualization.LineChart(document.getElementById('lineChart'));
+        lineChart.draw(data, options);
+
+        let scatterChart = new google.visualization.ScatterChart(document.getElementById('scatterChar'));
+        scatterChart.draw(data, options);
+
+        let barChart = new google.visualization.BarChart(document.getElementById('barChart'));
+        barChart.draw(barChartData, barChartOptions);
+
+        let pieChart = new google.visualization.PieChart(document.getElementById('pieChart'));
+        pieChart.draw(barChartData, barChartOptions);
+    }
+</script>
+</body>
+</html>
