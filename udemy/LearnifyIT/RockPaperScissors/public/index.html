@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock, Paper and Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<h1>Multiplayer Rock Paper Scissors</h1>
+<div id="game">
+    <div id="choices">
+        <button class="choice" data-choice="ROCK">✊</button>
+        <button class="choice" data-choice="PAPER">🖐</button>
+        <button class="choice" data-choice="SCISSORS">✌️</button>
+    </div>
+    <p id="status">Waiting for an opponent...</p>
+    <p id="result"></p>
+</div>
+<script src="client.js"></script>
 </body>
 </html>
